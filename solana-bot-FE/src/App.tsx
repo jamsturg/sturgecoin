@@ -2,7 +2,7 @@ import { Header } from "./features/header";
 import NotFound from "./pages/404";
 import { Mint, MintLayout, Trading } from "./pages/mint";
 import { Home, SniperLayout } from "./pages/sniper";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 // import { SniperLayout, Home } from "@pages/sniper";
 // import { MintLayout, Mint ,Trading} from "@pages/mint";
 // import NotFound from "@pages/404";
@@ -10,7 +10,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <div className="dark bg-dracula-background text-dracula-foreground min-h-screen">
+      <BrowserRouter>
       <Header />
       <Routes >
         <Route element={<SniperLayout />} path="/sniper"  >
@@ -24,7 +25,8 @@ function App() {
         <Route path="*" element={<NotFound />}>
         </Route>
       </Routes >
-    </BrowserRouter >
+      </BrowserRouter>
+    </div>
   );
 }
 

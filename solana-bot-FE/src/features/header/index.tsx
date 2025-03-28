@@ -53,10 +53,10 @@ export const Header = () => {
   })
 
   return (
-    <div className="flex justify-between items-center bg-[#121212] w-[100%] h-[100%]">
+    <div className="flex justify-between items-center bg-dracula-currentLine w-[100%] h-[100%]">
       <div className="flex items-center gap-5 my-2 p-[8px_30px]">
         <div className={`shadow-[0_0_5px_5px_${connect ? 'green' : 'red'}] rounded-[50%] w-6 h-6`} style={{ backgroundColor: `${connect ? 'green' : 'red'}`, boxShadow: `${connect ? '0 0 5px 5px green' : '0 0 5px 5px red'}` }} />
-        <div className="text-bright">Server Status</div>
+        <div className="text-dracula-foreground">Server Status</div>
       </div>
       <div className="flex items-center gap-5 px-5">
         <NavBtn name='Sniping Bot' link='/sniper' />
